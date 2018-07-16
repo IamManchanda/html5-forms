@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 number input with polyfill</title>
+    <!-- add references to polyfill styles and scripts -->
+    <link rel="stylesheet" type="text/css" href="number-polyfill/number-polyfill.css" />
+    <script type="text/javascript" src="number-polyfill/vendor/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="number-polyfill/number-polyfill.js"></script>
+  </head>
+  <body>
+    
+    <h1>HTML5 number input with polyfill</h1>
+
+    <form>
+      <label for="shoe_size">Shoe size</label>:
+      <!-- no changes need to be made to the markup, the polyfill code works automatically -->
+      <input type="number" min="5" max="18" step="0.5" value="9" name="shoe_size" id="shoe_size" />
+    </form>
+
+  </body>
+</html>
