@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Labels - radio buttons and checkboxes</title>
+  </head>
+  <body>
+    
+    <h1>Labels - radio buttons and checkboxes</h1>
+
+    <form>
+
+      <h2>Without labels</h2>
+      <div>
+        <input type="radio" name="colour" value="red" /> Red<br />
+        <input type="radio" name="colour" value="green" /> Green<br />
+        <input type="radio" name="colour" value="blue" /> Blue
+      </div><br />
+      <div>
+        <input type="checkbox" /> I agree with everything
+      </div>
+
+      <h2>With labels</h2>
+      <div>
+        <input type="radio" name="colour" value="red" id="option1" />
+        <label for="option1">Red</label><br />
+        <input type="radio" name="colour" value="green" id="option2" />
+        <label for="option2">Green</label><br />
+        <input type="radio" name="colour" value="blue" id="option3" />
+        <label for="option3">Blue</label>
+      </div><br />
+      <div>
+        <input type="checkbox" id="agree" />
+        <label for="agree">I agree with everything</label>
+      </div>
+
+    </form>
+
+  </body>
+</html>
