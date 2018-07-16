@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple forms</title>
+  </head>
+  <body>
+    
+    <h1>Multiple forms</h1>
+
+    <!-- both forms have the same action -->
+    <form action="process_form.php" method="post">
+      <label for="login">Student login</label>:
+      <input type="text" name="login" />
+
+      <!-- hidden value to identify the form -->
+      <input type="hidden" name="form_name" value="student" />
+
+      <input type="submit" value="Login" />
+    </form>
+
+    <!-- both forms have the same action -->
+    <form action="process_form.php" method="post">
+      <label for="login">Teacher login</label>:
+      <input type="text" name="login" />
+
+      <!-- hidden value to identify the form -->
+      <input type="hidden" name="form_name" value="teacher" />
+
+      <input type="submit" value="Login" />
+    </form>
+
+  </body>
+</html>
