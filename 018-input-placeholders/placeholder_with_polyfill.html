@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 input placeholder</title>
+
+    <!-- add the placeholder polyfill -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery-placeholder/jquery.placeholder.js"></script>
+    <script>
+      $(function() {
+        $('input, textarea').placeholder();
+      });
+    </script>
+    <style>
+      .placeholder { color: #aaa; }  /* change the colour of the placeholder text */
+    </style>
+  </head>
+  <body>
+    
+    <h1>HTML5 input placeholder</h1>
+
+    <form>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" placeholder="e.g. John Smith" />
+      <br />
+      <label for="message">Message</label>
+      <textarea name="message" id="message" placeholder="Please type your message"></textarea>
+    </form>
+
+  </body>
+</html>
