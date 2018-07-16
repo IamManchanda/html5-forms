@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple submit buttons HTML5</title>
+  </head>
+  <body>
+    
+    <h1>Multiple submit buttons HTML5</h1>
+
+    <form>
+      <label for="headline">Headline</label>:
+      <input type="text" name="headline" />
+
+      <input 
+        type="submit" 
+        value="Save Draft" 
+        formaction="process_form2.php" 
+        formmethod="post" 
+      />
+      <input 
+        type="submit" 
+        value="Publish"
+         formaction="process_form3.php" 
+         formmethod="get" 
+      />
+    </form>
+
+  </body>
+</html>
