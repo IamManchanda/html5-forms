@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic form controls - select option groups</title>
+  </head>
+  <body>
+    
+    <h1>Select option groups</h1>
+
+    <form action="process_form.php">
+      Please select an option:
+
+      <div>
+        <select name="marque">
+          <optgroup label="Swedish Cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+          </optgroup>
+          <optgroup label="German Cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <input type="submit" />
+    </form>
+
+  </body>
+</html>

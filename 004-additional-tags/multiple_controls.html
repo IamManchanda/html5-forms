@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic form controls - multiple controls</title>
+  </head>
+  <body>
+    
+    <h1>Multiple controls</h1>
+
+    <form action="process_form.php">
+
+      <div>
+        Please type your name: <input type="text" name="forename" />
+      </div><br/>
+
+      Please select one option:
+      <div>
+        <input type="radio" name="colour" value="blue" />Blue <br/>
+        <input type="radio" name="colour" value="red" />Red <br/>
+      </div><br/>
+
+      <div>
+        <input type="checkbox" name="remember" />Remember me
+      </div><br />
+
+      <div>
+        Please select an option:
+
+        <select name="marque">
+          <option value="ford">Ford</option>
+          <option value="bmw">BMW</option>
+          <option value="saab">Saab</option>
+        </select>
+      </div>
+
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+
+  </body>
+</html>
