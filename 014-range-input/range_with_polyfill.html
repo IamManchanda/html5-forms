@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 range input with polyfill</title>
+    <!-- add references to the polyfill code -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script>
+    <script>
+      // Initialise the polyfill for the forms
+      webshims.polyfill('forms-ext');
+    </script>
+  </head>
+  <body>
+    
+    <h1>HTML5 range input with polyfill</h1>
+
+    <form action="process_form.php">
+      <label for="percentage">Percentage</label>:
+      <!-- no changes are required here, the polyfill works automatically -->
+      <input type="range" min="0" max="100" value="50" name="percentage" id="percentage" />
+      <input type="submit" value="Send" />
+    </form>
+
+  </body>
+</html>
