@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 in- and out-of-range styling</title>
+
+    <style>
+
+      /* In-range and out-of-range */
+      input:in-range {
+        outline: 2px dashed #0f0;  /* dashed green outline */
+      }
+      input:out-of-range {
+        outline: 2px dashed #f00;  /* dashed red outline */
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <h1>HTML5 in-range and out-of-range styling</h1>
+
+    <form action="process_form.php" method="post">
+
+      <label for="number">Age (18 to 30)</label>
+      <input type="number" name="number" id="number" min="18" max="30" />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+  </body>
+</html>

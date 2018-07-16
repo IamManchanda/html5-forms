@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 valid and invalid styling</title>
+    <style>
+
+      input:valid {
+        outline: 2px solid #0f0;  /* solid green outline */
+      }
+      input:invalid {
+        outline: 2px solid #f00;  /* solid red outline */
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <h1>HTML5 valid and invalid styling</h1>
+
+    <form action="process_form.php" method="post">
+      <p>
+        <label for="valid_email">valid email address</label>
+        <input type="email" name="valid_email" id="valid_email" value="dave@example.com" />
+      </p>
+
+      <p>
+        <label for="invalid_email">invalid email address</label>
+        <input type="email" name="invalid_email" id="invalid_email" value="invalid email address" />
+      </p>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+  </body>
+</html>

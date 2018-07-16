@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 required and optional styling</title>
+    <style>
+
+      /* Required and optional */
+      input:optional {
+        outline: 2px dotted #0f0;  /* dotted green outline */
+      }
+      input:required {
+        outline: 2px dotted #f00;  /* dotted red outline */
+      }
+
+      /* reset the outline for the submit button
+         otherwise it shows with the :optional styles */
+      input[type="submit"]:optional {
+        outline: initial;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <h1>HTML5 required and optional styling</h1>
+
+    <form action="process_form.php" method="post">
+      <p>
+        <label for="required_name">Name (required)</label>
+        <input type="text" name="required_name" id="required_name" required="required" />
+      </p>
+
+      <p>
+        <label for="optional_surname">Surname (optional)</label>
+        <input type="text" name="optional_surname" id="optional_surname" />
+      </p>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+  </body>
+</html>
