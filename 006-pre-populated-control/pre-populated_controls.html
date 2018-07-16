@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pre-populated controls</title>
+  </head>
+  <body>
+    
+    <h1>Pre-populated controls</h1>
+
+    <form>
+
+      <div>
+        <h2>Text</h2>
+
+        <label for="forename">Name</label>
+        <input type="text" name="forename" id="forename" value="Dave" />
+      </div>
+
+      <div>
+        <h2>Radio buttons</h2>
+        
+        <input type="radio" name="colour" value="red" id="option1" />
+        <label for="option1">Red</label><br />
+        <input type="radio" name="colour" value="green" id="option2" checked="checked" />
+        <label for="option2">Green</label><br />
+        <input type="radio" name="colour" value="blue" id="option3" />
+        <label for="option3">Blue</label>
+      </div>
+
+      <div>
+        <h2>Checkbox</h2>
+
+        <input type="checkbox" id="agree" checked="checked" />
+        <label for="agree">I agree with everything</label>
+      </div>
+
+      <div>
+        <h2>Textarea</h2>
+
+        <textarea cols="30" rows="3">The quick brown fox
+jumped over the lazy dog.</textarea>
+      </div>
+
+      <div>
+        <h2>Select</h2>
+
+        <label for="marque">Marque</label>
+        <select name="marque" id="marque">
+          <option value="ford">Ford</option>
+          <option value="bmw" selected="selected">BMW</option>
+          <option value="saab">Saab</option>
+        </select>
+      </div>
+
+      <div>
+        <h2>Multiple select</h2>
+
+        <label for="marques">Marques</label>
+        <select name="marque[]" id="marques" multiple="multiple">
+          <option value="ford">Ford</option>
+          <option value="bmw" selected="selected">BMW</option>
+          <option value="saab" selected="selected">Saab</option>
+          <option value="honda">Honda</option>
+        </select>
+      </div>
+
+      <div>
+        <h2>Select with blank default</h2>
+
+        <label for="number">Number</label>
+        <select name="number" id="number">
+          <option value=""></option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+    </form>
+
+  </body>
+</html>
