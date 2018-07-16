@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 validation with polyfill</title>
+    <!-- enable the polyfill -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script>
+    <script>
+      webshims.polyfill('forms-ext');
+    </script>
+  </head>
+  <body>
+    
+    <h1>HTML5 validation with polyfill</h1>
+
+    <form action="process_form.php" method="post">
+      <label for="name">Name (required)</label>
+      <input type="text" name="name" id="name" required="required" />
+      <br />
+
+      <label for="email">email address</label>
+      <input type="email" name="email" id="email" required="required" />
+      <br />
+
+      <label for="url">Web address</label>
+      <input type="url" name="url" id="url" required="required" />
+      <br />
+
+      <label for="number">Age</label>
+      <input type="number" name="number" id="number" min="18" max="30" required="required" />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+  </body>
+</html>
