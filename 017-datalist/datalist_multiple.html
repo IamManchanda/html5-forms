@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 datalist with multiple items</title>
+    <style>
+      #recipients {
+        width: 20em;  /* make the email input wider for the demo */
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>HTML5 datalist with multiple items</h1>
+
+    <form action="process_form.php">
+
+      <label for="recipients">Recipients</label>
+      <!-- the multiple attribute works with email and file controls -->
+      <input type="email" id="recipients" name="recipients" list="suggestions" multiple="multiple" />
+      <datalist id="suggestions">
+        <option value="dave@example.com" />
+        <option value="bob@example.com" />
+        <option value="jane@example.com" />
+      </datalist>
+
+      <input type="submit" value="Send" />
+    </form>
+
+  </body>
+</html>

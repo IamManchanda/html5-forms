@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 datalist</title>
+    <!-- enable the polyfill -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script>
+    <script>
+      webshims.polyfill('forms');
+    </script>
+  </head>
+  <body>
+    
+    <h1>HTML5 datalist</h1>
+
+    <form action="process_form.php">
+
+      <label for="colour">What is your favourite colour?</label>
+      <input id="colour" name="colour" list="suggestions" />
+      <datalist id="suggestions">
+        <option value="Red" />
+        <option value="Green" />
+        <option value="Blue" />
+      </datalist>
+
+      <input type="submit" value="Send" />
+    </form>
+
+  </body>
+</html>
