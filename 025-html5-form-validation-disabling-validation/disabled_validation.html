@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 validation disabled</title>
+  </head>
+  <body>
+    
+    <h1>HTML5 validation disabled</h1>
+
+    <!-- validation is disabled for the whole form with the novalidate attribute -->
+    <form action="process_form.php" method="post" novalidate="novalidate">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required="required" />
+      <br />
+
+      <label for="email">email address</label>
+      <input type="email" name="email" id="email" />
+      <br />
+
+      <label for="number">Age</label>
+      <input type="number" name="number" id="number" min="18" max="30" />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+  </body>
+</html>

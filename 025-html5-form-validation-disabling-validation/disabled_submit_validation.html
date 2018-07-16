@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 validation disabled on submit</title>
+  </head>
+  <body>
+    
+    <h1>HTML5 validation disabled on submit</h1>
+
+    <form action="process_form.php" method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required="required" />
+      <br />
+
+      <label for="email">email address</label>
+      <input type="email" name="email" id="email" required="required" />
+      <br />
+
+      <label for="number">Age</label>
+      <input type="number" name="number" id="number" min="18" max="30" />
+      <br />
+
+      <!-- validation, on by default for the form, is disabled for this submit button: -->
+      <input type="submit" value="Save draft" formnovalidate="formnovalidate" />
+      <!-- ... but not for this one: -->
+      <input type="submit" value="Publish" />
+    </form>
+
+  </body>
+</html>
