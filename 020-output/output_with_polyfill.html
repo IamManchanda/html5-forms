@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>HTML5 output elements with polyfill</title>
+	
+    <!-- enable the polyfill -->	
+    <script type="text/javascript" src="html5Forms.js/shared/js/modernizr.com/Modernizr-2.5.3.forms.js"></script>
+    <script type="text/javascript" src="html5Forms.js/shared/js/html5Forms.js" data-webforms2-support="output"></script>
+  </head>
+  <body>
+
+    <h1>HTML5 output elements with polyfill</h1>
+
+    <!-- 
+      For legacy browsers, we have to use "document.getElementById('result').innerHTML" 
+      instead of "result.value" and parseInt(a.value) instead of a.valueAsNumber
+    -->
+    <!-- <form onsubmit="return false" oninput="result.value = a.valueAsNumber + b.valueAsNumber"> -->
+    <form 
+        onsubmit="return false" 
+        oninput="document.getElementById('result').innerHTML = parseInt(a.value) + parseInt(b.value)">
+      <input name="a" id="a" type="number" /> +
+      <input name="b" id="b" type="number" /> =
+      <output name="result" id="result" for="a b"></output>
+    </form>
+
+  </body>
+</html>
