@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 validation patterns with polyfill</title>
+    <!-- enable the polyfill -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script>
+    <script>
+      webshims.polyfill('forms-ext');
+    </script>
+  </head>
+  <body>
+    
+    <h1>HTML5 validation patterns with polyfill</h1>
+
+    <form action="process_form.php" method="post">
+      <label for="name">Name</label>
+      <!-- the pattern is used for the validation, and the title is shown in the validation message -->
+      <input type="text" name="name" id="name" required="required"
+             pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" title="Forename surname" />
+      <br />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required="required"
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*"
+             title="At least one uppercase letter, one lowercase and one number" />
+      <br />
+
+      <label for="postcode">UK postcode</label>
+      <input type="text" name="postcode" id="postcode" required="required"
+             pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}" />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
