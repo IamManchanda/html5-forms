@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 FormData: create new form</title>
+  </head>
+  <body>
+    
+    <h1>HTML5 FormData: create new form</h1>
+
+    <button type="button" id="sendButton">Create form and send data</button>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        $('#sendButton').on('click', function(e) {
+
+          // Create a form and add two fields and their values
+          var formData = new FormData();
+          formData.append('part_num', '123ABC'); 
+          formData.append('part_price', 7.95);
+
+          /*
+          // You could send the data using XMLHttpRequest, like this:
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', 'process_form.php');  
+          xhr.send(formData);
+          */
+
+          // But for a more cross-browser solution, it's better to use jQuery:
+          $.ajax({
+            url: 'process_form.php',
+            data: formData,      // send the formData object
+            contentType: false,  // tell jQuery not to adjust content-type
+            processData: false,  // tell jQuery not to convert raw data to a querystring
+            type: 'POST',
+            success: function(data){
+              alert(data);
+            }
+          });
+
+        });
+      });
+
+    </script>
+
+  </body>
+</html>
