@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read-only controls</title>
+  </head>
+  <body>
+    
+    <h1>Read-only controls</h1>
+
+    <form action="process_form.php" method="post">
+      <label for="title">Title</label>:
+      <input type="text" id="title" name="title" value="Normal text" /><br />
+
+      <label for="content">Content</label>:
+      <input type="text" id="content" name="content" readonly="readonly" value="Readonly text." />
+
+      <input type="submit" />
+    </form>
+
+  </body>
+</html>

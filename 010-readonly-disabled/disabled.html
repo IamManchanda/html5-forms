@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disabled controls</title>
+    <style type="text/css">
+      /* Style for labels to make them appear disabled */
+      label.disabled {
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Disabled controls</h1>
+
+    <form action="process_form.php" method="post">
+      <p>
+        <label for="title">Title</label>:
+        <input type="text" id="title" name="title" value="Normal text." />
+      </p>
+
+      <p>
+        <label for="content">Content</label>:
+        <input type="text" id="content" name="content" disabled="disabled" value="Disabled text." />
+      </p>
+
+      <p>
+        <fieldset>
+          <legend>Colour</legend>
+
+          <input type="radio" name="colour" value="red" id="option1" />
+          <label for="option1">Red</label><br />
+          <input type="radio" name="colour" value="green" id="option2" disabled="disabled" />
+          <label for="option2">Green (disabled input)</label><br />
+          <input type="radio" name="colour" value="blue" id="option3" />
+          <label for="option3">Blue</label><br />
+          <input type="radio" name="colour" value="yellow" id="option4" disabled="disabled" />
+          <label for="option4" class="disabled">Yellow (disabled input and label)</label><br />
+          <input type="radio" name="colour" value="orange" id="option5" />
+          <label for="option5">Orange</label>
+        </fieldset>
+      </p>
+
+      <p>
+        <label for="marque">Marque</label>:
+        <select name="marque">
+          <option value="ford">Ford</option>
+          <option value="bmw" disabled="disabled">BMW</option>
+          <option value="saab">Saab</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="checkbox" id="agree" checked="checked" disabled="disabled" />
+        <label for="agree">I agree with everything</label>
+      </p>
+
+      <input type="submit" />
+    </form>
+
+  </body>
+</html>
