@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 date and time inputs</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Webshim polyfill (date, month, time, datetime-local) -->
+    <script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script>
+    <script>
+      webshims.polyfill('forms-ext');
+    </script>
+
+    <!-- html5Forms.js polyfill (datetime, week) -->
+    <script type="text/javascript" src="html5Forms.js/shared/js/modernizr.com/Modernizr-2.5.3.forms.js"></script>
+    <script type="text/javascript" src="html5Forms.js/shared/js/html5Forms.js" data-webforms2-support="date"></script>
+
+  </head>
+  <body>
+    
+    <h1>HTML5 date and time inputs</h1>
+
+    <form action="process_form.php">
+
+      <fieldset>
+        <legend>Webshim</legend>
+
+        <div>
+          <h2>Date</h2>
+          <input type="date" name="date" min="2014-06-01" max="2015-06-01" />
+        </div>
+
+        <div>
+          <h2>Month</h2>
+          <input type="month" name="month" />
+        </div>
+
+        <div>
+          <h2>Time</h2>
+          <input type="time" name="time" />
+        </div>
+
+        <div>
+          <h2>Datetime-local</h2>
+          <input type="datetime-local" name="datetime-local" />
+        </div>
+      </fieldset><br />
+
+      <fieldset>
+        <legend>html5Forms.js</legend>
+
+        <div>
+          <h2>Week</h2>
+          <input type="week" name="week" />
+        </div>
+
+        <div>
+          <h2>Datetime</h2>
+          <input type="datetime" name="datetime" />
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Send" />
+    </form>
+
+  </body>
+</html>
